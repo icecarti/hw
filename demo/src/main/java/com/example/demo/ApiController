@@ -1,0 +1,21 @@
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.ArrayList;
+import java.util.List;
+ @Controller
+ @RestController
+public class ApiController {
+     Arraylist<String> messages = new ArrayList<>();
+
+
+    @GetMapping("messages")
+    public List<String> getMessages(){
+        return messages;
+        }
+    PostMapping("messages")
+    public void createMessage(@RequestBody String message){
+        messages.add(message);
+        }
+}
